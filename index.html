@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body{
+            background: #eee;
+            color: #555555;
+        }
+        header, main, footer {
+            padding-left: 300px;
+        }
+
+        nav{
+            background: transparent;
+            color: #555555!important;
+            padding: 0 32px;
+        }
+
+        nav .brand-logo{
+            font-size: 18px;
+        }
+
+        nav * a{
+            color: #555!important;
+        }
+
+        main{
+            margin-top: 70px;
+            /* padding: 30px 15px; */
+            padding: 30px 15px 30px 300px;
+            min-height: calc(100vh - 123px);
+        }        
+
+        .sidenav li > a, 
+        .sidenav * i,
+        #slide-out > li > a > i,
+        #slide-out > li.no-padding > ul > li > a > i{
+            color: #fff;
+        }
+
+        /* .sidenav li {
+            display: flex;
+            justify-content: space-between;
+        } */
+
+        @media only screen and (max-width : 992px) {
+            header, main, footer {
+                padding-left: 0;
+            }
+        }
+    </style>
+        
+  </head>
+  <body>
+    <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <nav class="z-depth-0">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons left hide-on-med-and-down">more_vert</i>
+                </a>
+                <a href="#!" class="brand-logo">Dashboard</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a><i class="material-icons">search</i></a></li>
+                    <li><a><i class="material-icons">dashboard</i></a></li>
+                    <li><a><i class="material-icons">notifications</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">person</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul id="slide-out" class="sidenav sidenav-fixed" style="background: #191919">
+            <li class="no-padding" style="margin: 2rem 0rem;">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                    <a class="collapsible-header" style="display: flex; align-items: center; justify-content: space-between;">
+                        <img class="" style="border-radius: 50px; width: 34px; height: 34px;" src="https://avatars2.githubusercontent.com/u/18651126?s=460&u=ea2834cff018a104af898c4b2a7ed376fce0e3da&v=4">
+                        John Doe
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                    <div class="collapsible-body grey darken-4">
+                        <ul>
+                            <li><a href="#!">First</a></li>
+                            <li><a href="#!">Second</a></li>
+                            <li><a href="#!">Third</a></li>
+                            <li><a href="#!">Fourth</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </li>
+            <li style="margin: 30px 0px;"><div class="divider" style="background: #555;"></div></li>
+            <li><a class="waves-effect" style="background: #43a047;" href="#!"><i class="material-icons">dashboard</i>Dashboard</a></li>
+            <li><a class="waves-effect" href="#!"><i class="material-icons">info</i>Explore</a></li>
+            <li><a class="waves-effect " href="#!"><i class="material-icons">chrome_reader_mode</i>About</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <div class="card" style="background: #66bb6a; border-radius: 3px; margin-top: -20px; padding: 15px;">
+                        <canvas id="lineChart1" min-width="250" min-height="250"></canvas>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                      <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <div class="card" style="background: #ec407a; border-radius: 3px; margin-top: -20px; padding: 15px;">
+                        <canvas id="lineChart2" min-width="250" min-height="250"></canvas>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                      <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <div class="card" style="background: #26c6da; border-radius: 3px; margin-top: -20px; padding: 15px;">
+                        <canvas id="lineChart3" min-width="250" min-height="250"></canvas>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                      <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- // #66bb6a,#43a047 - green
+    // #ec407a,#d81b60 - pink
+    // #26c6da,#00acc1 - cyan/blue
+    // #ffa726,#fb8c00 - orange -->
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+            var collapsibleElem = document.querySelector('.collapsible');
+            var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+
+
+            loadLineChart();
+        });
+
+        function loadLineChart(){
+            var data = {
+                labels: ["Tokyo",	"Mumbai",	"Mexico City",	"Shanghai",	"Sao Paulo",	"New York",	"Karachi","Buenos Aires",	"Delhi","Moscow"],
+                datasets: [{
+                    label: 'Series 1', // Name the series
+                    data: [500,	50,	2424,	14040,	14141,	4111,	4544,	47,	5555, 6811], // Specify the data values array
+                    fill: false,
+                    borderColor: '#2196f3', // Add custom color border (Line)
+                    backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                }]
+            }
+
+            var ctx1 = document.getElementById('lineChart1').getContext('2d');
+            var ctx2 = document.getElementById('lineChart2').getContext('2d');
+            var ctx3 = document.getElementById('lineChart3').getContext('2d');
+            
+            var myLineChart = new Chart(ctx1, {
+                type: 'line',
+                data: data,
+                options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+                }
+            });
+
+            var myLineChart = new Chart(ctx2, {
+                type: 'line',
+                data: data,
+                options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+                }
+            });
+
+            var myLineChart = new Chart(ctx3, {
+                type: 'line',
+                data: data,
+                options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+                }
+            });
+        }
+    </script>
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>
+
+
